@@ -40,3 +40,45 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Setting Navigation Content
+const navigation = document.querySelectorAll('nav a');
+
+navigation[0].textContent = siteContent["nav"]['nav-item-1'];
+navigation[1].textContent = siteContent["nav"]['nav-item-2'];
+navigation[2].textContent = siteContent["nav"]['nav-item-3'];
+navigation[3].textContent = siteContent["nav"]['nav-item-4'];
+navigation[4].textContent = siteContent["nav"]['nav-item-5'];
+navigation[5].textContent = siteContent["nav"]['nav-item-6'];
+
+//Adding H1 Text
+
+const heading = document.querySelector('h1').textContent = siteContent['cta']['h1'];
+
+//Button
+
+const ctaBut = document.querySelector('button').textContent = siteContent['cta']['button'];
+
+//CTA Image
+
+const ctaImg = document.querySelector('.cta img');
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+const middleHeadings = document.querySelectorAll('.main-content h4');
+middleHeadings[0].textContent = siteContent['main-content']['features-h4'];
+middleHeadings[1].textContent = siteContent['main-content']['about-h4'];
+middleHeadings[2].textContent = siteContent['main-content']['services-h4'];
+middleHeadings[3].textContent = siteContent['main-content']['product-h4'];
+middleHeadings[4].textContent = siteContent['main-content']['vision-h4'];
+
+const midImg = document.querySelector("#middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+const middleContent = document.querySelectorAll('.main-content p');
+middleContent[0].textContent = siteContent['main-content']['features-content'];
+middleContent[1].textContent = siteContent['main-content']['about-content'];
+middleContent[2].textContent = siteContent['main-content']['services-content'];
+middleContent[3].textContent = siteContent['main-content']['product-content'];
+middleContent[4].textContent = siteContent['main-content']['vision-content'];
+
