@@ -51,6 +51,8 @@ navigation[3].textContent = siteContent["nav"]['nav-item-4'];
 navigation[4].textContent = siteContent["nav"]['nav-item-5'];
 navigation[5].textContent = siteContent["nav"]['nav-item-6'];
 
+navigation.forEach() => {.style.color = 'green'}
+
 //Adding H1 Text
 
 const heading = document.querySelector('h1').textContent = siteContent['cta']['h1'];
@@ -61,8 +63,7 @@ const ctaBut = document.querySelector('button').textContent = siteContent['cta']
 
 //CTA Image
 
-const ctaImg = document.querySelector('.cta img');
-ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+const ctaImg = document.querySelector('.cta img').setAttribute('src', siteContent['cta']['img-src']);
 
 const middleHeadings = document.querySelectorAll('.main-content h4');
 middleHeadings[0].textContent = siteContent['main-content']['features-h4'];
@@ -71,8 +72,7 @@ middleHeadings[2].textContent = siteContent['main-content']['services-h4'];
 middleHeadings[3].textContent = siteContent['main-content']['product-h4'];
 middleHeadings[4].textContent = siteContent['main-content']['vision-h4'];
 
-const midImg = document.querySelector("#middle-img");
-midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+const midImg = document.querySelector("#middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 
 const middleContent = document.querySelectorAll('.main-content p');
@@ -82,3 +82,18 @@ middleContent[2].textContent = siteContent['main-content']['services-content'];
 middleContent[3].textContent = siteContent['main-content']['product-content'];
 middleContent[4].textContent = siteContent['main-content']['vision-content'];
 
+const newNav = document.querySelector('nav');
+const a1 = document.createElement('a');
+a1.textContent = 'Goats';
+a1.style.color = 'green';
+const a2 = document.createElement('a');
+a2.textContent = 'Monkeys';
+a2.style.color = 'green';
+newNav.appendChild(a1);
+newNav.appendChild(a2);
+
+const contactP = document.querySelectorAll('.contact p')
+contactP[0].textContent = siteContent['contact']['address'];
+contactP[0].style.whitespace = 'pre';
+contactP[1].textContent = siteContent['contact']['phone'];
+contactP[2].textContent = siteContent['contact']['email'];
