@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \nIs \nAwesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street \nSomewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -77,7 +77,9 @@ const a2 = document.createElement('a');
 
 // Adding H1 Text
 
-const heading = document.querySelector('h1').textContent = siteContent['cta']['h1'];
+const heading = document.querySelector('h1')
+  heading.textContent = siteContent['cta']['h1']
+  heading.style.whiteSpace = 'pre';
 
 // Button
 
@@ -110,8 +112,8 @@ const middleContent = document.querySelectorAll('.main-content p');
 const contactHeading = document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4'];
 
 const contactP = document.querySelectorAll('.contact p')
-  contactP[0].textContent = siteContent['contact']['address'];
-  contactP[0].style.whitespace = 'pre';
+  contactP[0].textContent = siteContent['contact']['address']
+  contactP[0].style.whiteSpace = 'pre';
   contactP[1].textContent = siteContent['contact']['phone'];
   contactP[2].textContent = siteContent['contact']['email'];
 
