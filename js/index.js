@@ -64,6 +64,7 @@ navigation.forEach(navColor => {navColor.style.color = 'green'});
 const newNav = document.querySelector('nav');
 
 const a1 = document.createElement('a');
+
   a1.textContent = 'Goats';
   a1.style.color = 'green';
   a1.setAttribute('href', siteContent['nav']['a-href']);
