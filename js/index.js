@@ -39,41 +39,42 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+let logo = document.getElementById("logo-img").setAttribute('src', siteContent["nav"]["img-src"]);
 
 // Navigation
 
 const navigation = document.querySelectorAll('nav a');
-  navigation[0].textContent = siteContent["nav"]['nav-item-1'];
-  navigation[1].textContent = siteContent["nav"]['nav-item-2'];
-  navigation[2].textContent = siteContent["nav"]['nav-item-3'];
-  navigation[3].textContent = siteContent["nav"]['nav-item-4'];
-  navigation[4].textContent = siteContent["nav"]['nav-item-5'];
-  navigation[5].textContent = siteContent["nav"]['nav-item-6'];
+  // navigation[0].textContent = siteContent["nav"]['nav-item-1'];
+  // navigation[1].textContent = siteContent["nav"]['nav-item-2'];
+  // navigation[2].textContent = siteContent["nav"]['nav-item-3'];
+  // navigation[3].textContent = siteContent["nav"]['nav-item-4'];
+  // navigation[4].textContent = siteContent["nav"]['nav-item-5'];
+  // navigation[5].textContent = siteContent["nav"]['nav-item-6'];
 
-// const NavItems = document.querySelectorAll('nav a');
-// NavItems.forEach((link, i) => {
-//  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
-// })
+  navigation.forEach((link, n) => {
+    link.textContent = siteContent['nav'][`nav-item-${n+1}`];
+  })
 
-// #Navigation Color
+// Navigation Color
 
 navigation.forEach(navColor => {navColor.style.color = 'green'});
 
-// #Adding to Navigation
+// Adding to Navigation
 
 const newNav = document.querySelector('nav');
 
 const a1 = document.createElement('a');
+
   a1.textContent = 'Goats';
   a1.style.color = 'green';
+  a1.setAttribute('href', siteContent['nav']['a-href']);
   newNav.appendChild(a1);
 
 const a2 = document.createElement('a');
   a2.textContent = 'Monkeys';
   a2.style.color = 'green';
-  newNav.appendChild(a2);
+  a2.setAttribute('href', siteContent['nav']['a-href']);
+  newNav.prepend(a2);
 
 // Adding H1 Text
 
